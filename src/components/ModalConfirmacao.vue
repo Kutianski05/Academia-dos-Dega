@@ -72,4 +72,10 @@ defineEmits(['fechar'])
     color: #39ff14;
     margin-bottom: 1rem;
 }
+
+h2{
+     margin-bottom: 0.5rem;
+     font-family: 'Roboto Condensed', sans-serif;
+     
+}
 </style>
