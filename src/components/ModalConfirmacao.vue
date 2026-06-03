@@ -94,4 +94,10 @@ p{
     font-size: 1rem;
     transition: 0.3s;
 }
+
+.btn-ok:hover{
+    background-color: black;
+    color: #39ff14;
+    border: 1px solid #39ff14;
+}
 </style>
