@@ -66,4 +66,10 @@ defineEmits(['fechar'])
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+.icone-sucesso{
+    font-size: 3.5rem;
+    color: #39ff14;
+    margin-bottom: 1rem;
+}
 </style>
