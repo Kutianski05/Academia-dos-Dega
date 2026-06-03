@@ -42,4 +42,14 @@ planos.filter(p =>
     p.nome.toLowerCase().includes(termo.Busca.value.toLowerCase())
 )
 )
+
+const modalVisivel = ref(false)
+const planoSelecionado = ref('')
+
+const selecionarPlano = (plano) => {
+    planoSelecionado.value = plano.nome
+    modalVisivel.value = true
+}
+
+
 </script>
