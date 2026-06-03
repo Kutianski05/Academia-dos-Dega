@@ -36,4 +36,17 @@ defineEmits(['fechar'])
     justify-content: center;
     z-index: 1000;
 }
+
+.modal{
+    background: #1a1a1a;
+    border: 2px solid #39ff14;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: aparecer 0.3s ease;
+}
 </style>
