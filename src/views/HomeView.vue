@@ -36,5 +36,10 @@ const stats = [
     {valor: 200, label: 'Equipamentos'},
 ]
 
-
+const termoBusca = ref('')
+const planosFiltrados = computed(() =>
+planos.filter(p =>
+    p.nome.toLowerCase().includes(termo.Busca.value.toLowerCase())
+)
+)
 </script>
