@@ -82,4 +82,16 @@ p{
     color: #ccc;
     margin-bottom: 1.5rem;
 }
+
+.btn-ok{
+    padding: 0.7rem 2rem;
+    background: #39ff14;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
 </style>
