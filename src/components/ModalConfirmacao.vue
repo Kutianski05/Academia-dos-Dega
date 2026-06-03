@@ -27,6 +27,7 @@ defineEmits(['fechar'])
 </template>
 
 <style scoped>
+
 .overlay{
     position: fixed;
     inset: 0;
@@ -48,5 +49,10 @@ defineEmits(['fechar'])
     width: 90%;
     position: relative;
     animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer{
+ from {transform: scale(0.8); opacity: 0;}
+ to {transform: scale(1); opacity:1;}
 }
 </style>
