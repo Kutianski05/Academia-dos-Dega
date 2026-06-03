@@ -51,5 +51,8 @@ const selecionarPlano = (plano) => {
     modalVisivel.value = true
 }
 
-
+const irParaMatricula = () => {
+    modalVisivel.value = false
+    router.push('/Matricula')
+}
 </script>
