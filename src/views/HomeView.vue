@@ -7,4 +7,117 @@ import PlanoCard from '../components/PlanoCard.vue'
 import ModalConfirmacao from '../components/ModalConfirmacao.vue'
 
 const router = useRouter()
+
+const planos = [
+    {
+        nome: 'Básico',
+        preco: 'R$ 120,00/mês',
+        icone: 'fas fa-star',
+        beneficios: ['Acesso a Musculação', 'Horários Livres', 'Vestiários']
+    },
+    {
+        nome: 'Intermediário',
+        preco: 'R$ 300,00/mês',
+        icone: 'fas fa-star-half-alt',
+        beneficios: ['Personal Trainer', 'Musculação', 'Aulas em grupo', 'App de Treino']
+    },
+    {
+        nome: 'Avançado',
+        preco: 'R$ 600,00/mês',
+        icone: 'fas fa-crown',
+        beneficios: ['Acompanhamento completo', 'Nutricionista', 'Personal Exclusivo', 'Suplementos']
+    }
+    ]
+
+const stats = [
+    {valor: 500, label: 'Alunos Ativos'},
+    {valor: 10, label: 'Personal Trainers'},
+    {valor: 1, label: 'Anos de Mercado'},
+    {valor: 200, label: 'Equipamentos'},
+]
+
+const termoBusca = ref('')
+const planosFiltrados = computed(() =>
+planos.filter(p =>
+    p.nome.toLowerCase().includes(termo.Busca.value.toLowerCase())
+)
+)
+
+const modalVisivel = ref(false)
+const planoSelecionado = ref('')
+
+const selecionarPlano = (plano) => {
+    planoSelecionado.value = plano.nome
+    modalVisivel.value = true
+}
+
+const irParaMatricula = () => {
+    modalVisivel.value = false
+    router.push('/matricula')
+}
 </script>
+
+<template>
+    <div class="page">
+        <NavBar titulo="Academia dos Dega" />
+
+        <!--Hero-->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Uma nova academia no mercado</h2>
+                    <p>Treine com os melhores profissionais do ramo!!</p>
+                    <router-link to="/matricula" class="btn-conheca">CONHEÇA NOSSOS PLANOS</router-link>
+                </div>
+                <div class="hero-icon">
+                    <i class="fas fa-dumbbell hero-dumbbell"></i>
+                </div>
+            </div>
+        </section>
+
+        <!--Seção de Busca-->
+        <section class="section-planos">
+            <div class="titulo-secao">
+                <h2>Nossos Planos</h2>
+            </div>
+
+            <div class="busca">
+                <i class="fas fa-search"></i>
+                <input
+                v-model="termoBusca"
+                type="text"
+                placeholder="Buscar plano..."
+                />
+            </div>
+
+            <p v-if="planosFiltrados.length === 0" class="sem-resultado">
+                Nenhum plano encontrado para <strong>{{ termoBusca }}</strong>"
+            </p>
+
+            <div class="cards">
+                <PlanoCard
+                v-for="plano in planosFiltrados"
+                :key="plano.nome"
+                :plano="plano"
+                @selecionar="selecionarPlano"
+                />
+            </div>
+        </section>
+
+        <section class="stats">
+            <div v-for="stat in stats" :key="stat.label" class="stat-item">
+                <span class="stat-num">{{ stat.valor }}+</span>
+                <span class="stat-label">{{ stat.label }}</span>
+            </div>
+        </section>
+
+        <ModalConfirmacao
+        v-if="modalVisivel"
+        :titulo="'Plano' + planoSelecionado"
+        :mensagem="'Redirecionando para a matricula no plano' + planoSelecionado + '!'"
+        @fechar="irParaMatricula"
+        />
+
+        <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho e Luis Antônio" />
+    </div>
+</template>
