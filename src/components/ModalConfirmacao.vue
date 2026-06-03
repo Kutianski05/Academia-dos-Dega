@@ -55,4 +55,15 @@ defineEmits(['fechar'])
  from {transform: scale(0.8); opacity: 0;}
  to {transform: scale(1); opacity:1;}
 }
+
+.fechar{
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 </style>
