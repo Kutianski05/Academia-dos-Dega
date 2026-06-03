@@ -53,6 +53,6 @@ const selecionarPlano = (plano) => {
 
 const irParaMatricula = () => {
     modalVisivel.value = false
-    router.push('/Matricula')
+    router.push('/matricula')
 }
 </script>
