@@ -172,4 +172,17 @@ const irParaMatricula = () => {
         color: #39ff14;
         opacity: 0.8;
     }
+
+    .btn-conheca {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #39ff14;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 12px 4px;
+        border-radius: 10px;
+        transition: 0.3s;
+        font-family: "Monteserrat", sans-serif;
+    }
 </style>
