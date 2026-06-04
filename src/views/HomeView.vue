@@ -191,4 +191,11 @@ const irParaMatricula = () => {
         transform: scale(1.05);
         box-shadow: 0 0 20px #39ff14;
     }
+
+    /*Seçao Planos*/
+    .section-planos{
+        padding: 2rem;
+        text-align: center;
+        color: white;
+    }
 </style>
