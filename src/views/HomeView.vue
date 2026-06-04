@@ -121,3 +121,27 @@ const irParaMatricula = () => {
         <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho e Luis Antônio" />
     </div>
 </template>
+
+<style scoped>
+    .page{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #000;
+
+    }
+
+    /*Hero*/
+    .hero{
+        background-color: #1a1a1a;
+        color: white;
+        padding: 4rem 2rem;
+        margin: 2rem auto;
+        max-width: 1100px;
+        width: 90%;
+        border-radius: 1.5rem;
+        box-shadow: 0,0,1rem rgba(0,0,0,0.5);
+    }
+
+    
+</style>
