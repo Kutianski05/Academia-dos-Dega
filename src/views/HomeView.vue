@@ -143,5 +143,10 @@ const irParaMatricula = () => {
         box-shadow: 0,0,1rem rgba(0,0,0,0.5);
     }
 
-    
+    .hero-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
 </style>
