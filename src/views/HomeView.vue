@@ -185,4 +185,10 @@ const irParaMatricula = () => {
         transition: 0.3s;
         font-family: "Monteserrat", sans-serif;
     }
+
+    .btn-conheca:hover{
+        background-color: #2a8f0f;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #39ff14;
+    }
 </style>
