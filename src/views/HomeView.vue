@@ -198,4 +198,13 @@ const irParaMatricula = () => {
         text-align: center;
         color: white;
     }
+
+    .titulo-secao h2{
+        display: inline-block;
+        border: 2px solid #39ff14;
+        border-radius: 20px;
+        padding: 0.4rem 1.2rem;
+        font-family: "Montesserat", sans-serif;
+        margin-bottom: 1.5rem;
+    }
 </style>
