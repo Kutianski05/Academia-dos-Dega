@@ -166,4 +166,10 @@ const irParaMatricula = () => {
         margin-bottom: 1.5rem;
         font-family: "Monteserrat", sans-serif;
     }
+
+    .hero-dumbell{
+        font-size: clamp(4rem, 10vw, 8rem);
+        color: #39ff14;
+        opacity: 0.8;
+    }
 </style>
