@@ -149,4 +149,21 @@ const irParaMatricula = () => {
         justify-content: space-between;
         gap: 2rem;
     }
+
+    .hero-text{
+        flex: 1;
+    }
+
+    .hero-text h2{
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-family: "Roboto Condensed", sans-serif;
+        margin-bottom: 1px;
+    }
+
+    .hero-text p{
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 1.5rem;
+        font-family: "Monteserrat", sans-serif;
+    }
 </style>
