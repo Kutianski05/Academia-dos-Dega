@@ -121,3 +121,90 @@ const irParaMatricula = () => {
         <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho e Luis Antônio" />
     </div>
 </template>
+
+<style scoped>
+    .page{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #000;
+
+    }
+
+    /*Hero*/
+    .hero{
+        background-color: #1a1a1a;
+        color: white;
+        padding: 4rem 2rem;
+        margin: 2rem auto;
+        max-width: 1100px;
+        width: 90%;
+        border-radius: 1.5rem;
+        box-shadow: 0,0,1rem rgba(0,0,0,0.5);
+    }
+
+    .hero-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .hero-text{
+        flex: 1;
+    }
+
+    .hero-text h2{
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-family: "Roboto Condensed", sans-serif;
+        margin-bottom: 1px;
+    }
+
+    .hero-text p{
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 1.5rem;
+        font-family: "Monteserrat", sans-serif;
+    }
+
+    .hero-dumbell{
+        font-size: clamp(4rem, 10vw, 8rem);
+        color: #39ff14;
+        opacity: 0.8;
+    }
+
+    .btn-conheca {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #39ff14;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 12px 4px;
+        border-radius: 10px;
+        transition: 0.3s;
+        font-family: "Monteserrat", sans-serif;
+    }
+
+    .btn-conheca:hover{
+        background-color: #2a8f0f;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #39ff14;
+    }
+
+    /*Seçao Planos*/
+    .section-planos{
+        padding: 2rem;
+        text-align: center;
+        color: white;
+    }
+
+    .titulo-secao h2{
+        display: inline-block;
+        border: 2px solid #39ff14;
+        border-radius: 20px;
+        padding: 0.4rem 1.2rem;
+        font-family: "Montesserat", sans-serif;
+        margin-bottom: 1.5rem;
+    }
+</style>
