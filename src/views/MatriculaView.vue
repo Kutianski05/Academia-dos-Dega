@@ -103,6 +103,17 @@ const enviarFormulario = async () => {
                         />
                         <span v-if="erros.cpf" class="msg-erro">{{ erros.cpf }}</span>
                     </div>
+
+                    <div class="campo">
+                        <input
+                        v-model="form.email"
+                        type="email"
+                        placeholder="Email"
+                        :class="{erro: erros.email}"
+                        />
+
+                        <spam v-if="erros.email" class="msg-erro">{{ erros.email }}</spam>
+                    </div>
                 </form>
             </section>
         </main>
