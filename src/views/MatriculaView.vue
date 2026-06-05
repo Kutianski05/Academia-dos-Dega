@@ -158,6 +158,13 @@ const enviarFormulario = async () => {
                 </section>
         </main>
 
-        
+            <ModalConfirmacao
+            v-if="modalVisivel"
+            titulo="Matrícula realizada!!"
+            :mensagem="'Bem vindo(a),' + 'nomeSalvo' + 'em breve entraremos em contato.'"
+            @fechar="modalVisivel = false"
+            />
+
+            
     </div>
 </template>
