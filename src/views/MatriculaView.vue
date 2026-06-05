@@ -71,3 +71,25 @@ const enviarFormulario = async () => {
     Object.assign(form, { nome: '', cpf: '', email: '', telefone: '', plano: ''})
 }
 </script>
+
+<template>
+    <div class="page">
+        <NavBar titulo="Matrícula" />
+
+        <main class="container">
+            <section class="formulario">
+                <h2>Faça a sua Matrícula na Academia dos DEGA</h2>
+
+                <form @submit.prevent="enviarFormulario" novalidate>
+                    <div class="campo">
+                        <input
+                        v-model="form.nome"
+                        type="text"
+                        placeholder="Nome completo"
+                        :class="{erro: erros.nome}"
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</template>
