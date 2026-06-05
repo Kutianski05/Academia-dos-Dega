@@ -91,6 +91,18 @@ const enviarFormulario = async () => {
 
                         <span v-if="erros.nome" class="msg-erro">{{ erros.nome }}</span>
                     </div>
+
+                    <div class="campo">
+                        <input
+                        v-model="form.cpf"
+                        type="text"
+                        placeholder="CPF (000.000.000-00)"
+                        maxlength="14"
+                        :class="{erro: erros.cpf}"
+                        @input="mascaraCPF"
+                        />
+                        <span v-if="erros.cpf" class="msg-erro">{{ erros.cpf }}</span>
+                    </div>
                 </form>
             </section>
         </main>
