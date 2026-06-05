@@ -114,6 +114,18 @@ const enviarFormulario = async () => {
 
                         <spam v-if="erros.email" class="msg-erro">{{ erros.email }}</spam>
                     </div>
+
+                    <div class="campo">
+                        <input
+                        v-model="form.telefone"
+                        type="tel"
+                        placeholder="Telefone 42(XXXXX-XXXX)"
+                        maxlength="14"
+                        :class="{erro: erros.telefone}"
+                        @input="mascaraTelefone"
+                        />
+                        <span v-if="erros.telefone" class="msg-erro">{{ erros.telefone }}</span>
+                    </div>
                 </form>
             </section>
         </main>
