@@ -144,7 +144,20 @@ const enviarFormulario = async () => {
                     </button>     
                 </form>
             </section>
-            
+
+                <section class="infos">
+                    <div class="icone-area"><i class="fas fa-dumbell icone-grande"></i></div>
+                    <h2>Transforme seu corpo com a Academia dos DEGA</h2>
+                    <p>Treine com os melhores equipamentos e personais trainers do ramo!!</p>
+
+                    <ul class="lista-beneficios">
+                         <li v-for="b in beneficios" key="b">
+                            <i class="fas fa-check"></i> {{ b }}
+                         </li>
+                    </ul>
+                </section>
         </main>
+
+        
     </div>
 </template>
