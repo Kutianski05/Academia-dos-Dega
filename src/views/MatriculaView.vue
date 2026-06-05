@@ -57,6 +57,17 @@ const validar = () => {
   for (const e of Object.values(erros)) { if (e) { ok = false; break } }
   return ok
 }
-  
 
+const enviarFormulario = async () => {
+    if(! validar()) return
+    enviando.value = true
+    nomeSalvo.value = form.nome.split(' ')[0]
+
+    await new Promise(r => setTimeout(r, 1200))
+
+    enviando.value = false
+    modalVisivel.value = true
+
+    Object.assign(form, { nome: '', cpf: '', email: '', telefone: '', plano: ''})
+}
 </script>
