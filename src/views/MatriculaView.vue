@@ -126,8 +126,25 @@ const enviarFormulario = async () => {
                         />
                         <span v-if="erros.telefone" class="msg-erro">{{ erros.telefone }}</span>
                     </div>
+
+                    <div class="campo">
+                             <select v-model="form.plano" class="{erro: erros.plano}">
+                            <option value="">Escolha um Plano de Mensalidade</option>
+
+                        <option v-for="p in opcoesPlanos" :key="p.valor" :value="p.valor">
+                            {{ p.label }}
+                        </option>
+                        </select>
+                        <span v-if="erros.plano" class="msg-erro">{{ erros.plano }}</span>
+                    </div>
+
+                    <button type="submit" :disabled="enviando">
+                        <span v-if="enviando"><i class="fas fa-spinner fa-spin"></i> Enviando... </span>
+                        <span v-else>Matricular</span>
+                    </button>     
                 </form>
             </section>
+            
         </main>
     </div>
 </template>
