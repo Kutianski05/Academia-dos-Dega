@@ -87,6 +87,9 @@ const enviarFormulario = async () => {
                         type="text"
                         placeholder="Nome completo"
                         :class="{erro: erros.nome}"
+                        />
+
+                        <span v-if="erros.nome" class="msg-erro">{{ erros.nome }}</span>
                     </div>
                 </form>
             </section>
