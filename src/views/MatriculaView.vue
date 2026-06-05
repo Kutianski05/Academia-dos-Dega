@@ -30,6 +30,14 @@ const erros = reactive({
 const enviando = ref(false)
 const modalVisivel = ref(false)
 const nomeSalvo = ref('')
+
+const mascaraCPF = () => {
+    let v = form.cpf.replace(/\D/g, '')
+  if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4')
+  else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3')
+  else if (v.length > 3) v = v.replace(/(\d{3})(\d{0,3})/, '$1.$2')
+  form.cpf = v
+}
   
 
 </script>
