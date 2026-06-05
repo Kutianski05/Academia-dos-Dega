@@ -165,6 +165,6 @@ const enviarFormulario = async () => {
             @fechar="modalVisivel = false"
             />
 
-            
+            <FooterBar texto="Pagína feita por João Vitor Kutianski" />
     </div>
 </template>
