@@ -45,6 +45,18 @@ const mascaraTelefone = () => {
   else if (v.length > 2) v = v.replace(/(\d{2})(\d{0,5})/, '$1 $2')
   form.telefone = v
 }
+
+const validar = () => {
+      let ok = true
+  erros.nome     = form.nome.trim().length < 3 ? 'Informe seu nome completo.' : ''
+  erros.cpf      = form.cpf.replace(/\D/g,'').length !== 11 ? 'CPF inválido.' : ''
+  erros.email    = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) ? 'Email inválido.' : ''
+  erros.telefone = form.telefone.replace(/\D/g,'').length < 10 ? 'Telefone inválido.' : ''
+  erros.plano    = form.plano === '' ? 'Selecione um plano.' : ''
+
+  for (const e of Object.values(erros)) { if (e) { ok = false; break } }
+  return ok
+}
   
 
 </script>
