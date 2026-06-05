@@ -24,8 +24,12 @@ const form = reactive({
 })
 
 const erros = reactive({
-    
+     nome: '', cpf: '', email: '', telefone: '', plano: ''
 })
+
+const enviando = ref(false)
+const modalVisivel = ref(false)
+const nomeSalvo = ref('')
   
 
 </script>
