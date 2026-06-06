@@ -248,4 +248,16 @@ const enviarFormulario = async () => {
         transition: 0.3s;
         font-family: "Monteserrat", sans-serif;
     }
+
+    form button:hover:not(:disabled){
+        background: #39ff14;
+        color: black;
+        box-shadow: 0 0 20px #39ff14;
+        transform: scale(1.03);
+    }
+
+    form button:disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
 </style>
