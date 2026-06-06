@@ -260,4 +260,15 @@ const enviarFormulario = async () => {
         opacity: 0.6;
         cursor: not-allowed;
     }
+
+    .infos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: whitesmoke;
+        padding: 2rem;
+        gap: 1rem;
+    }
 </style>
