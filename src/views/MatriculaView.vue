@@ -168,3 +168,12 @@ const enviarFormulario = async () => {
             <FooterBar texto="Pagína feita por João Vitor Kutianski" />
     </div>
 </template>
+
+<style scoped>
+    .page{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #000;
+    }
+</style>
