@@ -237,4 +237,15 @@ const enviarFormulario = async () => {
         color: #ff4444;
     }
     
+    form button{
+        padding: 0.8rem;
+        background: whitesmoke;
+        border: 2px solid #39ff14;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "Monteserrat", sans-serif;
+    }
 </style>
