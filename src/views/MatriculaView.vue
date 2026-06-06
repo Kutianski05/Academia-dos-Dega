@@ -301,4 +301,10 @@ const enviarFormulario = async () => {
         color: #39ff14;
         margin-right: 8px;
     }
+
+    @keyframes neonPulse {
+    0%   { box-shadow: 0 0 10px #39ff14; }
+    50%  { box-shadow: 0 0 30px #39ff14; }
+    100% { box-shadow: 0 0 10px #39ff14; }
+}
 </style>
