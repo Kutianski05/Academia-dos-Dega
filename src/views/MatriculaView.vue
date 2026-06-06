@@ -271,4 +271,14 @@ const enviarFormulario = async () => {
         padding: 2rem;
         gap: 1rem;
     }
+
+    .icone-area{
+        font-size: 5rem;
+        color: #39ff14;
+    }
+
+    infos h2{
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.5rem;
+    }
 </style>
