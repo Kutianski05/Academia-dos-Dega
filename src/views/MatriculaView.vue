@@ -176,4 +176,15 @@ const enviarFormulario = async () => {
         min-height: 100vh;
         background: #000;
     }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+        flex: 1;
+        max-width: 1100px;
+        margin: 0 auto;
+        width: 100%;
+    }
 </style>
