@@ -306,5 +306,11 @@ const enviarFormulario = async () => {
     0%   { box-shadow: 0 0 10px #39ff14; }
     50%  { box-shadow: 0 0 30px #39ff14; }
     100% { box-shadow: 0 0 10px #39ff14; }
-}
+    }
+
+    @media (max-width: 768px){
+        .container{
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
