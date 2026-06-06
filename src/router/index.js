@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/HomeView.vue'
+import Matricula from '../views/MatriculaView.vue'
 
 const routes = [
   { path: '/', component: Home}
