@@ -223,4 +223,12 @@ const enviarFormulario = async () => {
         font-size: 0.95rem;
         transition: 0.3s;
     }
+
+    input:focus, select:focus{
+        box-shadow: 0 0 10px #39ff14;
+    }
+
+    input.erro, select.erro{
+        border-color: #ff4444;
+    }
 </style>
