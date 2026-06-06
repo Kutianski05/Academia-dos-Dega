@@ -231,4 +231,10 @@ const enviarFormulario = async () => {
     input.erro, select.erro{
         border-color: #ff4444;
     }
+
+    .msg-erro{
+        font-size: 0.78rem;
+        color: #ff4444;
+    }
+    
 </style>
