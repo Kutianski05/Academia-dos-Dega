@@ -281,4 +281,12 @@ const enviarFormulario = async () => {
         font-family: "Roboto Condensed", sans-serif;
         font-size: 1.5rem;
     }
+    infos p{
+        color: #aaa;
+    }
+    .lista-beneficios{
+        list-style: none;
+        text-align: left;
+        margin-top: 1rem;
+    }
 </style>
