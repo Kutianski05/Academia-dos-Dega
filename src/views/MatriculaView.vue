@@ -208,4 +208,9 @@ const enviarFormulario = async () => {
         flex-direction: column;
         gap: 0.8rem;
     }
+    .campo{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
 </style>
