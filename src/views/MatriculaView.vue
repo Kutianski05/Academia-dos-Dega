@@ -194,6 +194,12 @@ const enviarFormulario = async () => {
       padding: 2rem;
       color: #39ff14;
       animation: neonPulse 2.5s infinite;
+    }
 
+    .formulario h2{
+        color: whitesmoke;
+        margin-bottom: 1.5rem;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.3rem;
     }
 </style>
