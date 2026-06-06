@@ -213,4 +213,14 @@ const enviarFormulario = async () => {
         flex-direction: column;
         gap: 3px;
     }
+    input, select{
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        border: 1px solid #39ff14;
+        background: #111;
+        color: whitesmoke;
+        outline: none;
+        font-size: 0.95rem;
+        transition: 0.3s;
+    }
 </style>
