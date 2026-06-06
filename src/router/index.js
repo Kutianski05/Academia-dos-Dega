@@ -8,8 +8,12 @@ const routes = [
   {path: '/MatriculaView', component: Matricula}
 ]
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+  history: createWebHistory(),
+  routes,
+
+  scrollBehavior(){
+    return{ top: 0 }
+  }
 })
 
 export default router
