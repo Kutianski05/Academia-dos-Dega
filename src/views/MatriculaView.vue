@@ -202,4 +202,10 @@ const enviarFormulario = async () => {
         font-family: "Roboto Condensed", sans-serif;
         font-size: 1.3rem;
     }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
 </style>
