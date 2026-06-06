@@ -284,9 +284,21 @@ const enviarFormulario = async () => {
     infos p{
         color: #aaa;
     }
+
     .lista-beneficios{
         list-style: none;
         text-align: left;
         margin-top: 1rem;
+    }
+
+    .lista-beneficios li{
+        margin: 8px 0;
+        font-size: 0.95rem;
+        color: #ccc
+    }
+
+    .lista-beneficios .fa-check{
+        color: #39ff14;
+        margin-right: 8px;
     }
 </style>
