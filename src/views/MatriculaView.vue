@@ -187,4 +187,13 @@ const enviarFormulario = async () => {
         margin: 0 auto;
         width: 100%;
     }
+
+    .formulario{
+      background: #1a1a1a;
+      border-radius: 1rem;
+      padding: 2rem;
+      color: #39ff14;
+      animation: neonPulse 2.5s infinite;
+
+    }
 </style>
