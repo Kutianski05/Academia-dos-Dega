@@ -14,7 +14,36 @@
     </div>
 
     <section class="container-tabelas">
-        
+        <div
+        v-for="treino in treinos"
+        :key="treino.nome"
+        v-show="filtroAtivo === 'Todos' || filtroAtivo === treino.nome"
+        class="caixa"
+      >
+        <h3>{{ treino.nome }}</h3>
+        <table>
+          <tbody>
+            <tr v-for="ex in treino.exercicios" :key="ex.nome">
+              <td>{{ ex.nome }}</td>
+              <td>{{ ex.series }}</td>
+              <td>
+                <button
+                  class="btn-check"
+                  :class="{ concluido: ex.feito }"
+                  @click="ex.feito = !ex.feito"
+                  :title="ex.feito ? 'Desmarcar' : 'Marcar como feito'"
+                >
+                  <i :class="ex.feito ? 'fas fa-check-circle' : 'far fa-circle'"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="progresso">
+          <div class="barra" :style="{ width: progressoTreino(treino) + '%' }"></div>
+        </div>
+        <span class="pct">{{ progressoTreino(treino) }}% concluído</span>
+      </div>
     </section>
 
     <FooterBar texto="Página criada por Nelson" />
@@ -70,6 +99,11 @@ const treinos = reactive([
     ]
   }
 ])
+const progressoTreino = (treino) => {
+  const total = treino.exercicios.length
+  const feitos = treino.exercicios.filter(e => e.feito).length
+  return Math.round((feitos / total) * 100)
+}
 
 </script>
 
