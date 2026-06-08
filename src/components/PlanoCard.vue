@@ -46,5 +46,11 @@ h3 {
   font-size: 1.4rem;
   color: #39ff14;
 }
+.preco {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
 
 </style>
