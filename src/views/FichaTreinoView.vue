@@ -13,6 +13,20 @@
       </p>
     </div>
 
+    <div class="filtro-area">
+      <p class="filtro-label">Filtrar treino:</p>
+      <div class="filtro-botoes">
+        <button
+          v-for="cat in categorias"
+          :key="cat"
+          :class="['btn-filtro', { ativo: filtroAtivo === cat }]"
+          @click="filtroAtivo = cat"
+        >
+          {{ cat }}
+        </button>
+      </div>
+    </div>
+
     <section class="container-tabelas">
         <div
         v-for="treino in treinos"
@@ -62,6 +76,9 @@ const dadosAluno = [
   { label: 'Objetivo', valor: 'Hipertrofia' },
   { label: 'Tipo',     valor: 'CrossFit' },
 ]
+
+const categorias = ['Todos', 'PUSH', 'PULL', 'LEGS']
+const filtroAtivo = ref('Todos')
 
 const treinos = reactive([
   {
