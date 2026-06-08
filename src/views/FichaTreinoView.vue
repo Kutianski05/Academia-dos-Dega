@@ -131,4 +131,21 @@ const progressoTreino = (treino) => {
   min-height: 100vh;
   background: #000;
 }
+.dados {
+  background-color: #111;
+  border: 1px solid #39ff14;
+  color: white;
+  max-width: 600px;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+  font-family: "Noto Sans", sans-serif;
+}
+
+.avatar { font-size: 4rem; color: #39ff14; margin-bottom: 0.5rem; }
+.dados h2 { font-size: 1.4rem; margin-bottom: 1rem; }
+.dados p { font-size: 1rem; margin: 4px 0; color: #ccc; }
+.dados strong { color: #39ff14; }
 </style>
