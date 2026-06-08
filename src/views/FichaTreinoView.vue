@@ -246,4 +246,7 @@ const progressoTreino = (treino) => {
   color: #39ff14;
   text-align: right;
 }
+@media (max-width: 768px) {
+  .container-tabelas { grid-template-columns: 1fr; }
+}
 </style>
