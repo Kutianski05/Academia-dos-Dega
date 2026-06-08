@@ -13,6 +13,10 @@
       </p>
     </div>
 
+    <section class="container-tabelas">
+        
+    </section>
+
     <FooterBar texto="Página criada por Nelson" />
 </div>
 </template>
@@ -29,6 +33,44 @@ const dadosAluno = [
   { label: 'Objetivo', valor: 'Hipertrofia' },
   { label: 'Tipo',     valor: 'CrossFit' },
 ]
+
+const treinos = reactive([
+  {
+    nome: 'PUSH',
+    exercicios: [
+      { nome: 'Supino Reto',        series: '3 séries (10-12)', feito: false },
+      { nome: 'Voador',             series: '3 séries (10-12)', feito: false },
+      { nome: 'Desenvolvimento',    series: '3 séries (10-12)', feito: false },
+      { nome: 'Elevação Lateral',   series: '3 séries (10-12)', feito: false },
+      { nome: 'Tríceps Francês',    series: '3 séries (10-12)', feito: false },
+      { nome: 'Tríceps Testa',      series: '3 séries (10-12)', feito: false },
+    ]
+  },
+  {
+    nome: 'PULL',
+    exercicios: [
+      { nome: 'Remada Curvada',  series: '3 séries (10-12)', feito: false },
+      { nome: 'Puxada Alta',     series: '3 séries (10-12)', feito: false },
+      { nome: 'Puxada Baixa',    series: '3 séries (10-12)', feito: false },
+      { nome: 'Voador Inverso',  series: '3 séries (10-12)', feito: false },
+      { nome: 'Pulldown',        series: '3 séries (10-12)', feito: false },
+      { nome: 'Rosca Direta',    series: '3 séries (10-12)', feito: false },
+      { nome: 'Rosca Martelo',   series: '3 séries (10-12)', feito: false },
+    ]
+  },
+  {
+    nome: 'LEGS',
+    exercicios: [
+      { nome: 'Agachamento',       series: '3 séries (10-12)', feito: false },
+      { nome: 'Stiff',             series: '3 séries (10-12)', feito: false },
+      { nome: 'Cadeira Flexora',   series: '3 séries (10-12)', feito: false },
+      { nome: 'Leg Press',         series: '3 séries (10-12)', feito: false },
+      { nome: 'Cadeira Extensora', series: '3 séries (10-12)', feito: false },
+      { nome: 'Passada',           series: '3 séries (10-12)', feito: false },
+    ]
+  }
+])
+
 </script>
 
 <style scoped>
