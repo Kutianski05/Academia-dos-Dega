@@ -38,5 +38,10 @@ defineEmits(['selecionar'])
   transform: scale(1.05);
   box-shadow: 0 0 25px #39ff14;
 }
+.icone {
+  font-size: 2.5rem;
+  color: #39ff14;
+}
+
 
 </style>
