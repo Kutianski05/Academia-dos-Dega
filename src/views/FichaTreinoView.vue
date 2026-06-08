@@ -163,4 +163,21 @@ const progressoTreino = (treino) => {
   gap: 10px;
   flex-wrap: wrap;
 }
+.btn-filtro {
+  padding: 0.5rem 1.2rem;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-filtro.ativo,
+.btn-filtro:hover {
+  border-color: #39ff14;
+  color: #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+}
 </style>
