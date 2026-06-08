@@ -157,4 +157,10 @@ const progressoTreino = (treino) => {
 
 .filtro-label { margin-bottom: 0.8rem; font-family: "Montserrat", sans-serif; }
 
+.filtro-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 </style>
