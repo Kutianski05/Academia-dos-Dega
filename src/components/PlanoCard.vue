@@ -42,6 +42,9 @@ defineEmits(['selecionar'])
   font-size: 2.5rem;
   color: #39ff14;
 }
-
+h3 {
+  font-size: 1.4rem;
+  color: #39ff14;
+}
 
 </style>
