@@ -77,5 +77,9 @@ h3 {
   transition: 0.3s;
   font-family: "Montserrat", sans-serif;
 }
-
+.btn-plano:hover {
+  background: black;
+  color: #39ff14;
+  border: 1px solid #39ff14;
+}
 </style>
