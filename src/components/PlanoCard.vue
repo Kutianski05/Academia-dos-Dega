@@ -65,4 +65,17 @@ h3 {
   color: #39ff14;
   margin-right: 6px;
 }
+.btn-plano {
+  margin-top: 10px;
+  padding: 0.6rem 1.4rem;
+  background: #39ff14;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+
 </style>
