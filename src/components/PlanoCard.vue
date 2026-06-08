@@ -34,4 +34,9 @@ defineEmits(['selecionar'])
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #39ff14;
+}
+
 </style>
