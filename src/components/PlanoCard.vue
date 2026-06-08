@@ -56,6 +56,10 @@ h3 {
   text-align: left;
   width: 100%;
 }
-
+.beneficios li {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
 
 </style>
