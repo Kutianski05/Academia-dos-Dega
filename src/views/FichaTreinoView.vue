@@ -207,4 +207,11 @@ const progressoTreino = (treino) => {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
 }
+.caixa table { width: 100%; border-collapse: collapse; }
+
+.caixa td {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid #333;
+  font-size: 0.9rem;
+}
 </style>
