@@ -61,5 +61,8 @@ h3 {
   font-size: 0.9rem;
   color: #ccc;
 }
-
+.beneficios .fa-check {
+  color: #39ff14;
+  margin-right: 6px;
+}
 </style>
