@@ -51,6 +51,11 @@ h3 {
   font-weight: bold;
   color: white;
 }
+.beneficios {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+}
 
 
 </style>
