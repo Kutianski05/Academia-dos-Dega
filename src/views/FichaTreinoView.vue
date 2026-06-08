@@ -148,4 +148,13 @@ const progressoTreino = (treino) => {
 .dados h2 { font-size: 1.4rem; margin-bottom: 1rem; }
 .dados p { font-size: 1rem; margin: 4px 0; color: #ccc; }
 .dados strong { color: #39ff14; }
+
+.filtro-area {
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+}
+
+.filtro-label { margin-bottom: 0.8rem; font-family: "Montserrat", sans-serif; }
+
 </style>
