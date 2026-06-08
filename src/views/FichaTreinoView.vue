@@ -189,4 +189,22 @@ const progressoTreino = (treino) => {
   margin: 0 auto;
   width: 100%;
 }
+.caixa {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.caixa h3 {
+  color: #39ff14;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
 </style>
