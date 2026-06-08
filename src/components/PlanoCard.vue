@@ -16,3 +16,22 @@
 defineProps({ plano: Object })
 defineEmits(['selecionar'])
 </script>
+
+<style scoped>
+.card {
+  background: #1a1a1a;
+  border: 2px solid #39ff14;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+</style>
