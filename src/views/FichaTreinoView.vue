@@ -214,4 +214,15 @@ const progressoTreino = (treino) => {
   border-bottom: 1px solid #333;
   font-size: 0.9rem;
 }
+.btn-check {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+
+.btn-check.concluido { color: #39ff14; }
+.btn-check:hover { transform: scale(1.2); }
 </style>
