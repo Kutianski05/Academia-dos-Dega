@@ -4,7 +4,6 @@ import FooterBar from '../components/FooterBar.vue'
 import NavBar from '../components/NavBar.vue'
 import ModalConfirmacao from '@/components/ModalConfirmacao.vue'
 
-
 const opcoesPlanos = [
     { valor: 'Basico', label: 'Básico -- 120,00 R$/ mês' },
     { valor: 'Intermediario', label: 'Intermediário -- 300,00 R$/ mês' },
@@ -24,7 +23,7 @@ const form = reactive({
 })
 
 const erros = reactive({
-     nome: '', cpf: '', email: '', telefone: '', plano: ''
+    nome: '', cpf: '', email: '', telefone: '', plano: ''
 })
 
 const enviando = ref(false)
@@ -33,33 +32,33 @@ const nomeSalvo = ref('')
 
 const mascaraCPF = () => {
     let v = form.cpf.replace(/\D/g, '')
-  if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4')
-  else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3')
-  else if (v.length > 3) v = v.replace(/(\d{3})(\d{0,3})/, '$1.$2')
-  form.cpf = v
+    if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4')
+    else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3')
+    else if (v.length > 3) v = v.replace(/(\d{3})(\d{0,3})/, '$1.$2')
+    form.cpf = v
 }
 
 const mascaraTelefone = () => {
     let v = form.telefone.replace(/\D/g, '')
-  if (v.length > 6) v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '$1 $2-$3')
-  else if (v.length > 2) v = v.replace(/(\d{2})(\d{0,5})/, '$1 $2')
-  form.telefone = v
+    if (v.length > 6) v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '$1 $2-$3')
+    else if (v.length > 2) v = v.replace(/(\d{2})(\d{0,5})/, '$1 $2')
+    form.telefone = v
 }
 
 const validar = () => {
-      let ok = true
-  erros.nome     = form.nome.trim().length < 3 ? 'Informe seu nome completo.' : ''
-  erros.cpf      = form.cpf.replace(/\D/g,'').length !== 11 ? 'CPF inválido.' : ''
-  erros.email    = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) ? 'Email inválido.' : ''
-  erros.telefone = form.telefone.replace(/\D/g,'').length < 10 ? 'Telefone inválido.' : ''
-  erros.plano    = form.plano === '' ? 'Selecione um plano.' : ''
+    let ok = true
+    erros.nome     = form.nome.trim().length < 3 ? 'Informe seu nome completo.' : ''
+    erros.cpf      = form.cpf.replace(/\D/g,'').length !== 11 ? 'CPF inválido.' : ''
+    erros.email    = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) ? 'Email inválido.' : ''
+    erros.telefone = form.telefone.replace(/\D/g,'').length < 10 ? 'Telefone inválido.' : ''
+    erros.plano    = form.plano === '' ? 'Selecione um plano.' : ''
 
-  for (const e of Object.values(erros)) { if (e) { ok = false; break } }
-  return ok
+    for (const e of Object.values(erros)) { if (e) { ok = false; break } }
+    return ok
 }
 
 const enviarFormulario = async () => {
-    if(! validar()) return
+    if(!validar()) return
     enviando.value = true
     nomeSalvo.value = form.nome.split(' ')[0]
 
@@ -83,57 +82,54 @@ const enviarFormulario = async () => {
                 <form @submit.prevent="enviarFormulario" novalidate>
                     <div class="campo">
                         <input
-                        v-model="form.nome"
-                        type="text"
-                        placeholder="Nome completo"
-                        :class="{erro: erros.nome}"
+                            v-model="form.nome"
+                            type="text"
+                            placeholder="Nome completo"
+                            :class="{erro: erros.nome}"
                         />
-
                         <span v-if="erros.nome" class="msg-erro">{{ erros.nome }}</span>
                     </div>
 
                     <div class="campo">
                         <input
-                        v-model="form.cpf"
-                        type="text"
-                        placeholder="CPF (000.000.000-00)"
-                        maxlength="14"
-                        :class="{erro: erros.cpf}"
-                        @input="mascaraCPF"
+                            v-model="form.cpf"
+                            type="text"
+                            placeholder="CPF (000.000.000-00)"
+                            maxlength="14"
+                            :class="{erro: erros.cpf}"
+                            @input="mascaraCPF"
                         />
                         <span v-if="erros.cpf" class="msg-erro">{{ erros.cpf }}</span>
                     </div>
 
                     <div class="campo">
                         <input
-                        v-model="form.email"
-                        type="email"
-                        placeholder="Email"
-                        :class="{erro: erros.email}"
+                            v-model="form.email"
+                            type="email"
+                            placeholder="Email"
+                            :class="{erro: erros.email}"
                         />
-
-                        <spam v-if="erros.email" class="msg-erro">{{ erros.email }}</spam>
+                        <span v-if="erros.email" class="msg-erro">{{ erros.email }}</span>
                     </div>
 
                     <div class="campo">
                         <input
-                        v-model="form.telefone"
-                        type="tel"
-                        placeholder="Telefone 42(XXXXX-XXXX)"
-                        maxlength="14"
-                        :class="{erro: erros.telefone}"
-                        @input="mascaraTelefone"
+                            v-model="form.telefone"
+                            type="tel"
+                            placeholder="Telefone 42(XXXXX-XXXX)"
+                            maxlength="14"
+                            :class="{erro: erros.telefone}"
+                            @input="mascaraTelefone"
                         />
                         <span v-if="erros.telefone" class="msg-erro">{{ erros.telefone }}</span>
                     </div>
 
                     <div class="campo">
-                             <select v-model="form.plano" class="{erro: erros.plano}">
+                        <select v-model="form.plano" :class="{erro: erros.plano}">
                             <option value="">Escolha um Plano de Mensalidade</option>
-
-                        <option v-for="p in opcoesPlanos" :key="p.valor" :value="p.valor">
-                            {{ p.label }}
-                        </option>
+                            <option v-for="p in opcoesPlanos" :key="p.valor" :value="p.valor">
+                                {{ p.label }}
+                            </option>
                         </select>
                         <span v-if="erros.plano" class="msg-erro">{{ erros.plano }}</span>
                     </div>
@@ -145,27 +141,29 @@ const enviarFormulario = async () => {
                 </form>
             </section>
 
-                <section class="infos">
-                    <div class="icone-area"><i class="fas fa-dumbell icone-grande"></i></div>
-                    <h2>Transforme seu corpo com a Academia dos DEGA</h2>
-                    <p>Treine com os melhores equipamentos e personais trainers do ramo!!</p>
+            <section class="infos">
+                <div class="icone-area">
+                    <i class="fas fa-dumbbell icone-grande"></i>
+                </div>
+                <h2>Transforme seu corpo com a Academia dos DEGA</h2>
+                <p>Treine com os melhores equipamentos e personal trainers do ramo!!</p>
 
-                    <ul class="lista-beneficios">
-                         <li v-for="b in beneficios" key="b">
-                            <i class="fas fa-check"></i> {{ b }}
-                         </li>
-                    </ul>
-                </section>
+                <ul class="lista-beneficios">
+                     <li v-for="b in beneficios" :key="b">
+                        <i class="fas fa-check"></i> {{ b }}
+                     </li>
+                </ul>
+            </section>
         </main>
 
-            <ModalConfirmacao
+        <ModalConfirmacao
             v-if="modalVisivel"
             titulo="Matrícula realizada!!"
-            :mensagem="'Bem vindo(a),' + 'nomeSalvo' + 'em breve entraremos em contato.'"
+            :mensagem="'Bem-vindo(a), ' + nomeSalvo + '! Em breve entraremos em contato.'"
             @fechar="modalVisivel = false"
-            />
+        />
 
-            <FooterBar texto="Pagína feita por João Vitor Kutianski" />
+        <FooterBar texto="Página feita por João Vitor Kutianski" />
     </div>
 </template>
 
@@ -247,7 +245,7 @@ const enviarFormulario = async () => {
         font-size: 1rem;
         cursor: pointer;
         transition: 0.3s;
-        font-family: "Monteserrat", sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
 
     form button:hover:not(:disabled){
@@ -278,11 +276,11 @@ const enviarFormulario = async () => {
         color: #39ff14;
     }
 
-    infos h2{
+    .infos h2{
         font-family: "Roboto Condensed", sans-serif;
         font-size: 1.5rem;
     }
-    infos p{
+    .infos p{
         color: #aaa;
     }
 
@@ -304,9 +302,9 @@ const enviarFormulario = async () => {
     }
 
     @keyframes neonPulse {
-    0%   { box-shadow: 0 0 10px #39ff14; }
-    50%  { box-shadow: 0 0 30px #39ff14; }
-    100% { box-shadow: 0 0 10px #39ff14; }
+        0%   { box-shadow: 0 0 10px #39ff14; }
+        50%  { box-shadow: 0 0 30px #39ff14; }
+        100% { box-shadow: 0 0 10px #39ff14; }
     }
 
     @media (max-width: 768px){

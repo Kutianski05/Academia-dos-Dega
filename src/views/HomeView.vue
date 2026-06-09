@@ -168,11 +168,11 @@ const irParaMatricula = () => {
         font-family: "Monteserrat", sans-serif;
     }
 
-    .hero-dumbell{
-        font-size: clamp(4rem, 10vw, 8rem);
-        color: #39ff14;
-        opacity: 0.8;
-    }
+  .hero-dumbbell {
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: #39ff14;
+  opacity: 0.8;
+}
 
     .btn-conheca {
         display: inline-block;
@@ -208,4 +208,11 @@ const irParaMatricula = () => {
         font-family: "Montesserat", sans-serif;
         margin-bottom: 1.5rem;
     }
+    .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
 </style>
