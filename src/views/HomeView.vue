@@ -118,7 +118,7 @@ const irParaMatricula = () => {
         @fechar="irParaMatricula"
         />
 
-        <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho e Luis Antônio" />
+        <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho" />
     </div>
 </template>
 
@@ -128,6 +128,7 @@ const irParaMatricula = () => {
         flex-direction: column;
         min-height: 100vh;
         background: #000;
+        padding-top: 80px;
 
     }
 

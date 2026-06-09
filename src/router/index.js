@@ -8,9 +8,9 @@ import MatriculaView from '../views/MatriculaView.vue'
 
 const routes = [
   { path: '/', component: HomeView},
-  {path: '/Ficha', component: FichaTreinoView},
-  {path: '/Matricula', component: MatriculaView},
-  {path: '/Contato', component: ContatoView}
+  {path: '/ficha', component: FichaTreinoView},
+  {path: '/matricula', component: MatriculaView},
+  {path: '/contato', component: ContatoView}
 ]
 const router = createRouter({
   history: createWebHistory(),

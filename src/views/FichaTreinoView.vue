@@ -130,6 +130,7 @@ const progressoTreino = (treino) => {
   flex-direction: column;
   min-height: 100vh;
   background: #000;
+  padding-top: 80px;
 }
 .dados {
   background-color: #111;

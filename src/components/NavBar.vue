@@ -6,6 +6,7 @@
       </div>
       <ul class="nav-links">
         <li><router-link to="/">Início</router-link></li>
+        <li><router-link to="/ficha">Ficha de Treino</router-link></li>
         <li><router-link to="/matricula">Matrícula</router-link></li>
         <li><router-link to="/contato">Contato</router-link></li>
       </ul>

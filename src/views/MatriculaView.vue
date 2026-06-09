@@ -175,6 +175,7 @@ const enviarFormulario = async () => {
         flex-direction: column;
         min-height: 100vh;
         background: #000;
+        padding-top: 80px;
     }
 
     .container{

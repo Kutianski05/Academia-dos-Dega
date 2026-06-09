@@ -50,7 +50,7 @@ const enviarContato = () => {
                 </div>
         </section>
 
-        <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho e Luis Antônio" />
+        <FooterBar texto="Página feita por Fabinho" />
 
     </div>
 </template>
@@ -60,6 +60,7 @@ const enviarContato = () => {
         background-color: #000;
         min-height: 100vh;
         color: #fff;
+        padding-top: 80px;
     }
 
     .contato-container{
