@@ -52,6 +52,10 @@ src/
 
 ## Tecnologias usadas no projeto
 -Vue.js
+
 -Vue router
+
 -Vite
+
 -HTML, CSS e JavaScript
+
