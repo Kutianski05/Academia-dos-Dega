@@ -74,12 +74,12 @@ const enviarContato = () => {
         background-color: #1a1a1a;
         padding: 40px;
         border-radius: 20px;
-        border-left: 5px solid #95ff00;
+        border-left: 5px solid #39ff14;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
     h2{
-        color: #95ff00;
+        color: #39ff14;
         margin-bottom: 10px;
         font-family: "Roboto Condensed", sans-serif;
     }
@@ -115,12 +115,12 @@ const enviarContato = () => {
     }
     
     input:focus, textarea:focus {
-        border-color: #95ff00;
+        border-color: #39ff14;
         box-shadow: 0 0 8px rgba(149, 255, 0, 0.3);
     }
 
     .btn-enviar {
-        background-color: #95ff00;
+        background-color: #39ff14;
         color: #000;
         border: none;
         padding: 15px 30px;
@@ -136,7 +136,7 @@ const enviarContato = () => {
     
     .btn-enviar:hover {
         transform: scale(1.01);
-        background-color: #7ed400;
+        background-color: #39ff14;
     }
 
     .info-adicional {
@@ -148,7 +148,7 @@ const enviarContato = () => {
 
     .info-item {
         text-align: center;
-        color: #95ff00;
+        color: #39ff14;
         font-size: 1.5rem;
         flex: 1;
         background: #1a1a1a;
