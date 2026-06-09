@@ -61,4 +61,12 @@ defineProps(['texto'])
         color: #ffffff;
     }
 
+    @media (max-width: 600px) {
+        .footer-bar-flutuante{
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+    }
+
 </style>
