@@ -1,6 +1,6 @@
 <script setup>
-import {ref, computed} from 'vue'
-import {useRouter} from 'vue-router'
+import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import NavBar from '../components/NavBar.vue'
 import FooterBar from '../components/FooterBar.vue'
 import PlanoCard from '../components/PlanoCard.vue'
@@ -27,20 +27,20 @@ const planos = [
         icone: 'fas fa-crown',
         beneficios: ['Acompanhamento completo', 'Nutricionista', 'Personal Exclusivo', 'Suplementos']
     }
-    ]
+]
 
 const stats = [
-    {valor: 500, label: 'Alunos Ativos'},
-    {valor: 10, label: 'Personal Trainers'},
-    {valor: 1, label: 'Anos de Mercado'},
-    {valor: 200, label: 'Equipamentos'},
+    { valor: 500, label: 'Alunos Ativos' },
+    { valor: 10, label: 'Personal Trainers' },
+    { valor: 1, label: 'Anos de Mercado' },
+    { valor: 200, label: 'Equipamentos' },
 ]
 
 const termoBusca = ref('')
 const planosFiltrados = computed(() =>
-planos.filter(p =>
-    p.nome.toLowerCase().includes(termoBusca.value.toLowerCase()) 
-)
+    planos.filter(p =>
+        p.nome.toLowerCase().includes(termoBusca.value.toLowerCase())
+    )
 )
 
 const modalVisivel = ref(false)
@@ -53,7 +53,21 @@ const selecionarPlano = (plano) => {
 
 const irParaMatricula = () => {
     modalVisivel.value = false
-    router.push('/matricula')
+    
+    // Mapeamento do nome visual para o valor do valor do <select> na tela de matrícula
+    const mapaPlanos = {
+        'Básico': 'Basico',
+        'Intermediário': 'Intermediario',
+        'Avançado': 'Avancado'
+    }
+    
+    const planoQuery = mapaPlanos[planoSelecionado.value] || ''
+
+    // Redireciona passando o plano por Query Params (?plano=...)
+    router.push({ 
+        path: '/matricula', 
+        query: { plano: planoQuery } 
+    })
 }
 </script>
 
@@ -61,7 +75,6 @@ const irParaMatricula = () => {
     <div class="page">
         <NavBar titulo="Academia dos Dega" />
 
-        <!--Hero-->
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-text">
@@ -75,7 +88,6 @@ const irParaMatricula = () => {
             </div>
         </section>
 
-        <!--Seção de Busca-->
         <section class="section-planos">
             <div class="titulo-secao">
                 <h2>Nossos Planos</h2>
@@ -84,9 +96,9 @@ const irParaMatricula = () => {
             <div class="busca">
                 <i class="fas fa-search"></i>
                 <input
-                v-model="termoBusca"
-                type="text"
-                placeholder="Buscar plano..."
+                    v-model="termoBusca"
+                    type="text"
+                    placeholder="Buscar plano..."
                 />
             </div>
 
@@ -96,10 +108,10 @@ const irParaMatricula = () => {
 
             <div class="cards">
                 <PlanoCard
-                v-for="plano in planosFiltrados"
-                :key="plano.nome"
-                :plano="plano"
-                @selecionar="selecionarPlano"
+                    v-for="plano in planosFiltrados"
+                    :key="plano.nome"
+                    :plano="plano"
+                    @selecionar="selecionarPlano"
                 />
             </div>
         </section>
@@ -112,10 +124,10 @@ const irParaMatricula = () => {
         </section>
 
         <ModalConfirmacao
-        v-if="modalVisivel"
-        :titulo="'Plano' + planoSelecionado"
-        :mensagem="'Redirecionando para a matricula no plano' + planoSelecionado + '!'"
-        @fechar="irParaMatricula"
+            v-if="modalVisivel"
+            :titulo="'Plano ' + planoSelecionado"
+            :mensagem="'Redirecionando para a matrícula no plano ' + planoSelecionado + '!'"
+            @fechar="irParaMatricula"
         />
 
         <FooterBar texto="Página feita por João Vitor, Nelson, Fabinho" />
@@ -123,17 +135,16 @@ const irParaMatricula = () => {
 </template>
 
 <style scoped>
-    .page{
+    .page {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         background: #000;
         padding-top: 80px;
-
     }
 
     /*Hero*/
-    .hero{
+    .hero {
         background-color: #1a1a1a;
         color: white;
         padding: 4rem 2rem;
@@ -141,38 +152,38 @@ const irParaMatricula = () => {
         max-width: 1100px;
         width: 90%;
         border-radius: 1.5rem;
-        box-shadow: 0,0,1rem rgba(0,0,0,0.5);
+        box-shadow: 0 0 1rem rgba(0,0,0,0.5);
     }
 
-    .hero-content{
+    .hero-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
     }
 
-    .hero-text{
+    .hero-text {
         flex: 1;
     }
 
-    .hero-text h2{
+    .hero-text h2 {
         font-size: clamp(1.5rem, 4vw, 2.5rem);
         font-family: "Roboto Condensed", sans-serif;
         margin-bottom: 1px;
     }
 
-    .hero-text p{
+    .hero-text p {
         font-size: 1.1rem;
         color: #ccc;
         margin-bottom: 1.5rem;
-        font-family: "Monteserrat", sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
 
-  .hero-dumbbell {
-  font-size: clamp(4rem, 10vw, 8rem);
-  color: #39ff14;
-  opacity: 0.8;
-}
+    .hero-dumbbell {
+        font-size: clamp(4rem, 10vw, 8rem);
+        color: #39ff14;
+        opacity: 0.8;
+    }
 
     .btn-conheca {
         display: inline-block;
@@ -184,35 +195,36 @@ const irParaMatricula = () => {
         padding: 12px 4px;
         border-radius: 10px;
         transition: 0.3s;
-        font-family: "Monteserrat", sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
 
-    .btn-conheca:hover{
+    .btn-conheca:hover {
         background-color: #2a8f0f;
         transform: scale(1.05);
         box-shadow: 0 0 20px #39ff14;
     }
 
     /*Seçao Planos*/
-    .section-planos{
+    .section-planos {
         padding: 2rem;
         text-align: center;
         color: white;
     }
 
-    .titulo-secao h2{
+    .titulo-secao h2 {
         display: inline-block;
         border: 2px solid #39ff14;
         border-radius: 20px;
         padding: 0.4rem 1.2rem;
-        font-family: "Montesserat", sans-serif;
+        font-family: "Montserrat", sans-serif;
         margin-bottom: 1.5rem;
     }
+
     .cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
 </style>

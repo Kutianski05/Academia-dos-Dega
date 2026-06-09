@@ -1,8 +1,11 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import FooterBar from '../components/FooterBar.vue'
 import NavBar from '../components/NavBar.vue'
 import ModalConfirmacao from '@/components/ModalConfirmacao.vue'
+
+const route = useRoute()
 
 const opcoesPlanos = [
     { valor: 'Basico', label: 'Básico -- 120,00 R$/ mês' },
@@ -29,6 +32,13 @@ const erros = reactive({
 const enviando = ref(false)
 const modalVisivel = ref(false)
 const nomeSalvo = ref('')
+
+// Captura o plano vindo da URL assim que o componente é carregado
+onMounted(() => {
+    if (route.query.plano) {
+        form.plano = route.query.plano
+    }
+})
 
 const mascaraCPF = () => {
     let v = form.cpf.replace(/\D/g, '')
