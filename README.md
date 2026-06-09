@@ -1,38 +1,47 @@
-# Academia dos Dega
+Academia dos Dega — Vue.js
+Site da Academia dos Dega reconstruído em Vue.js 
 
-This template should help get you started developing with Vue 3 in Vite.
+Integrantes
+João Vitor Kutianski
+Nelson
+Fabinho
+Como executar
+Pré-requisitos
+Node.js (v18 ou superior)
+npm
+Instalação
+# 1. Clone o repositório
+git clone https://github.com/SEU_USUARIO/academia-dega.git
+cd academia-dega
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# 2. Instale as dependências
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# 3. Rode em modo desenvolvimento
 npm run dev
-```
+Acesse: http://localhost:5173
 
-### Compile and Minify for Production
-
-```sh
+Build para produção
 npm run build
-```
+Estrutura do projeto
+src/
+├── components/
+│   ├── NavBar.vue          
+│   ├── FooterBar.vue       
+│   ├── PlanoCard.vue      
+│   └── ModalConfirmacao.vue 
+├── views/
+│   ├── HomeView.vue        
+│   ├── FichaTreinoView.vue  
+│   ├── MatriculaView.vue    
+│   └── ContatoView.vue     
+├── router/
+│   └── index.js           
+├── App.vue
+├── main.js
+└── style.css
+Tecnologias
+Vue.js 3 (Composition API)
+Vue Router 4
+Vite
+HTML + CSS + JavaScript
