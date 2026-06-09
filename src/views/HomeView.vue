@@ -54,7 +54,6 @@ const selecionarPlano = (plano) => {
 const irParaMatricula = () => {
     modalVisivel.value = false
     
-    // Mapeamento do nome visual para o valor do valor do <select> na tela de matrícula
     const mapaPlanos = {
         'Básico': 'Basico',
         'Intermediário': 'Intermediario',
@@ -63,7 +62,6 @@ const irParaMatricula = () => {
     
     const planoQuery = mapaPlanos[planoSelecionado.value] || ''
 
-    // Redireciona passando o plano por Query Params (?plano=...)
     router.push({ 
         path: '/matricula', 
         query: { plano: planoQuery } 
@@ -93,17 +91,18 @@ const irParaMatricula = () => {
                 <h2>Nossos Planos</h2>
             </div>
 
-            <div class="busca">
-                <i class="fas fa-search"></i>
+            <div class="busca-container">
+                <i class="fas fa-search busca-icone"></i>
                 <input
                     v-model="termoBusca"
                     type="text"
                     placeholder="Buscar plano..."
+                    class="busca-input"
                 />
             </div>
 
             <p v-if="planosFiltrados.length === 0" class="sem-resultado">
-                Nenhum plano encontrado para <strong>{{ termoBusca }}</strong>"
+                Nenhum plano encontrado para <strong>{{ termoBusca }}</strong>
             </p>
 
             <div class="cards">
@@ -219,6 +218,58 @@ const irParaMatricula = () => {
         font-family: "Montserrat", sans-serif;
         margin-bottom: 1.5rem;
     }
+
+    .busca-container {
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto 2rem auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .busca-input {
+        width: 100%;
+        padding: 0.8rem 1rem 0.8rem 2.8rem; /* Espaço na esquerda para o ícone */
+        border: 2px solid #39ff14;
+        border-radius: 50px; /* Deixa as bordas bem arredondadas */
+        background-color: #111;
+        color: #fff;
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Efeito de Neon ao clicar no input de busca */
+    .busca-input:focus {
+        box-shadow: 0 0 15px #39ff14;
+        background-color: #161616;
+    }
+
+    /* Ícone de Lupa posicionado dentro do input */
+    .busca-icone {
+        position: absolute;
+        left: 1.2rem;
+        color: #39ff14;
+        font-size: 1.1rem;
+        pointer-events: none; /* Garante que clicar no ícone também foque o input */
+    }
+
+    /* Placeholder customizado */
+    .busca-input::placeholder {
+        color: #666;
+        opacity: 1;
+    }
+
+    .sem-resultado {
+        margin-bottom: 2rem;
+        color: #aaa;
+    }
+
+    .sem-resultado strong {
+        color: #ff4444;
+    }
+    /* ========================================================================== */
 
     .cards {
         display: flex;
