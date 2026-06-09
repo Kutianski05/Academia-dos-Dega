@@ -64,7 +64,7 @@ defineProps(['titulo'])
 }
 
 .nav-links a:hover {
-  color: #95ff00; /* Verde do seu site */
+  color: #39ff14;
 }
 
 .btn-red {
