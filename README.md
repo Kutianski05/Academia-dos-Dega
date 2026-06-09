@@ -12,7 +12,9 @@ Fabinho
 Como executar
 
 Pré-requisitos
+
 Node.js (v18 ou superior)
+
 npm
 
 Instalação
