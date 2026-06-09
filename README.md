@@ -2,16 +2,18 @@ Academia dos Dega — Vue.js
 Site da Academia dos Dega reconstruído em Vue.js 
 
 Integrantes
+
 João Vitor Kutianski
 Nelson
 Fabinho
 
 Como executar
+
 Pré-requisitos
 Node.js (v18 ou superior)
 npm
-Instalação
 
+Instalação
 # 1. Clone o repositório
 git clone https://github.com/SEU_USUARIO/academia-dega.git
 cd academia-dega
