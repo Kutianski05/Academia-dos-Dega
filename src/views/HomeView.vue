@@ -39,7 +39,7 @@ const stats = [
 const termoBusca = ref('')
 const planosFiltrados = computed(() =>
 planos.filter(p =>
-    p.nome.toLowerCase().includes(termo.Busca.value.toLowerCase())
+    p.nome.toLowerCase().includes(termoBusca.value.toLowerCase()) 
 )
 )
 
