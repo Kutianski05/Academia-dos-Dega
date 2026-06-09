@@ -4,7 +4,9 @@ Site da Academia dos Dega reconstruído em Vue.js
 Integrantes
 
 João Vitor Kutianski
+
 Nelson
+
 Fabinho
 
 Como executar
