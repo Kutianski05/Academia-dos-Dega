@@ -1,26 +1,37 @@
-👥 Integrantes
-João Vitor Kutianski
-Nelson
-Fabinho
-🚀 Como executar
-Pré-requisitos
-Node.js (v18 ou superior)
-npm
-Instalação
-# 1. Clone o repositório
-git clone https://github.com/SEU_USUARIO/academia-dega.git
-cd academia-dega
+Academia dos DEGA projeto reaproveitado do 1°Bimestre feito agora com Vue.js
 
-# 2. Instale as dependências
+## Integrantes:
+
+João Vitor Kutianski
+
+Nelson Elielton Bolkota
+
+Fabio Luiz Baitala
+
+## Como executar:
+
+Pré-requisitos:
+
+Node.js
+
+npm
+
+## Instalação:
+
+git clone https://github.com/Kutianski05/Academia-dos-Dega
+cd academia-dos-dega
+
+// Instale as dependencias
+
 npm install
 
-# 3. Rode em modo desenvolvimento
-npm run dev
-Acesse: http://localhost:5173
+// Rode o site em Vue.js
 
-Build para produção
-npm run build
-📁 Estrutura do projeto
+npm run dev
+
+
+## Estrutura do Projeto:
+```
 src/
 ├── components/
 │   ├── NavBar.vue           # Barra de navegação reutilizável
@@ -37,8 +48,10 @@ src/
 ├── App.vue
 ├── main.js
 └── style.css
-🛠 Tecnologias
-Vue.js 3 (Composition API)
-Vue Router 4
-Vite
-HTML + CSS + JavaScript
+```
+
+## Tecnologias usadas no projeto
+-Vue.js
+-Vue router
+-Vite
+-HTML, CSS e JavaScript
