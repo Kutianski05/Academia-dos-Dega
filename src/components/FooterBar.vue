@@ -36,4 +36,21 @@ defineProps(['texto'])
         font-size: 1.5rem;
         color: #95ff00;
     }
+
+    @media (max-width: 768px){
+
+    .footer{
+        padding: 30px 15px;
+    }
+
+    .footer-dois p{
+        font-size: 0.9rem;
+    }
+
+    .rede-social{
+        gap: 15px;
+        font-size: 1.3rem;
+        flex-wrap: wrap;
+    }
+}
 </style>
